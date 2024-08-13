@@ -1,0 +1,24 @@
+
+<link rel="stylesheet" href="../STYLES/styles.css">
+    <link rel="stylesheet" href="project.html">
+
+<script>
+function getLocation(){
+if (navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(showPosition)
+}
+else {
+    document.getElementById("georgeSpace").innerHTML="location not found"
+}
+}
+function showPosition(position){
+    document.getElementById("georgeSpace").innerHTML="latitude:" +position.coords.latitude +"longitude:" +position.coords.longitude;
+}
+</script>
+</head>
+
+<body>
+    <button>
+francoResidence
+    </button>
+    <p id="georgeSpace">my house</p>
